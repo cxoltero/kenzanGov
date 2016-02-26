@@ -1,0 +1,150 @@
+<div class="container" >
+  <div id="app-body">
+    <img src="/app/images/topBar.png" alt="bar" id="sim-bar">
+    <div id="editor">
+      <div class="container">
+        <div class="html-tag mg1">
+          &lt !doctype html &gt <br>
+          &lt html &gt <br>
+        </div>
+        <div class="head">
+          <div class="html-tag mg1">
+            &lt head &gt <br>
+          </div>
+          <div class="html-tag mg2">
+            &lt title &gt <span class="code">Live Coding With Gina Raimondo</span>&lt /title &gt <br>
+          </div>
+          <div class="html-tag mg1">
+            &lt /head &gt <br>
+          </div>
+        </div>
+        <div class="app-body">
+          <div class="html-tag mg1">
+            &lt body <span class="styler"> style = <span class="prop-tag">"background:url( <input type="text" class="custom-input" id="img-input">  ) "</span></span>  &gt <span class="comment"> &lt ! Image Name &gt</span><br>
+          </div>
+          <div class="appNav">
+            <div class="html-tag mg2">
+              &lt nav <span class="styler"> class = <span class="prop-tag">"navbar navbar-inverse"</span></span>  &gt<br>
+            </div>
+            <div class="html-tag mg3">
+              &lt div <span class="styler"> class = <span class="prop-tag">"container"</span></span>  &gt<br>
+            </div>
+            <div class="html-tag mg4">
+              &lt div <span class="styler"> class = <span class="prop-tag">"navbar-header"</span></span>  &gt<br>
+            </div>
+            <div class="html-tag mg5">
+              &lt a <span class="styler"> class = <span class="prop-tag">"navbar-brand  "<span class="styler"> href= "#" </span>&gt <span class="code">Kenzan</span></span></span> &lt /a &gt<br>
+            </div>
+            <div class="html-tag mg4">
+              &lt /div &gt<br>
+            </div>
+            <div class="html-tag mg4">
+              &lt div
+              <span class="styler"> id = <span class="prop-tag">"navbar"</span></span>
+              <span class="styler"> class = <span class="prop-tag">"collapse navbar-collapse"</span></span>
+              &gt<br>
+            </div>
+            <div class="html-tag mg5">
+              &lt ul <span class="styler"> class = <span class="prop-tag">"nav navbar-nav  "</span> </span>&gt<br>
+            </div>
+            <div class="html-tag mg6">
+              &lt li <span class="styler"> class = <span class="prop-tag">"active  "</span></span> &gt
+              &lt a <span class="styler"> class = <span class="prop-tag">"navbar-brand  "<span class="styler"> href= "#" </span>&gt <span class="code">Terminal</span></span></span> &lt /a &gt &lt /li &gt<br>
+            </div>
+            <div class="html-tag mg5">
+              &lt /ul &gt<br>
+            </div>
+            <div class="html-tag mg4">
+              &lt /div &gt<br>
+            </div>
+            <div class="html-tag mg3">
+              &lt /div &gt<br>
+            </div>
+            <div class="html-tag mg2">
+              &lt /nav &gt<br>
+            </div>
+            <div class="html-tag mg2">
+              &lt h1 <span class="styler"> style = <span class="prop-tag">"color:  <input type="text" class="custom-input" id="color-input">  "</span></span>  &gt <span class="comment"> &lt ! Enter a color &gt</span><br>
+                <span class="mg3 code">Welcome <input type="text" class="custom-input" id="name-input" ><span class="comment"> &lt ! Enter your name &gt</span><br>
+              </span>&lt /h1 &gt<br>
+            </div>
+            <div class="html-tag mg2">
+              &lt h2  &gt <span class="code">Live coding with </span>&lt /h2 &gt<br>
+            </div>
+            <div class="html-tag mg2">
+              &lt div <span class="styler"> class = <span class="prop-tag">"view1"</span></span>  &gt <span class="code"><input type="text" class="custom-input" id="msg-input"></span>&lt /div &gt  <span class="comment"> &lt ! Something About you &gt</span>
+            </div>
+          </div>
+          <div class="html-tag mg1">
+            &lt /body &gt <br>
+          </div>
+        </div>
+        <div class="html-tag mg1">
+          &lt /html &gt
+        </div>
+      </div><br>
+    </div>
+  </div>
+  <div id="controls">
+    <div class="row">
+      <div class="col-sm-8">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3>Available Images</h3>
+          </div>
+          <div class="col-sm-3">
+            <div class="thumbContainer">
+              <div class="thumbnail">
+                <p class="col-sm-12">Providence</p>
+                <img ng-src="images/providence.jpg" class="img-responsive imgIcon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="thumbContainer">
+              <div class="thumbnail">
+                <p class="col-sm-12">Newport</p>
+                <img ng-src="images/ri.jpg" class="img-responsive imgIcon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="thumbContainer">
+              <div class="thumbnail">
+                <p class="col-sm-12">Blackstone</p>
+                <img ng-src="images/blackstone.jpg" class="img-responsive imgIcon" />
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-3">
+            <div class="thumbContainer">
+              <div class="thumbnail">
+                <p class="col-sm-12">Westerly</p>
+                <img ng-src="images/southc.jpg" class="img-responsive imgIcon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="col-sm-12" id="sampleColors">
+          <h3>Sample Colors</h3>
+          <ul  class="colorList col-sm-6">
+            <li>Red</li>
+            <li>Yellow</li>
+            <li>Orange</li>
+          </ul>
+          <ul  class="colorList col-sm-6">
+            <li>Blue</li>
+            <li>Green</li>
+            <li>Purple</li>
+          </ul>
+        </div><br>
+        <button type="submit" ng-click="vm.getData();"  id="submit-btn" class="btn btn-info" >Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
