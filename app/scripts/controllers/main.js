@@ -6,14 +6,15 @@ angular.module('kenzanGov')
     vm.name = 'Kenzan';
 
     var getImgClass = function(img){
-      if(img.includes('prov') || img.includes('iden')){
+      if(img== 'providence' || img.includes('prov') || img.includes('iden')){
         $("#template").removeClass('ri-other').addClass('prov');
-      }else if(img.includes('new') || img.includes('port')){
-        $("#template").removeClass('ri-other').addClass('newport');
-      }else if(img.includes('west') || img.includes('erl')){
+      }else if(img== 'westerly' || img.includes('west') || img.includes('erl')){
+        console.log(img);
         $("#template").removeClass('ri-other').addClass('westerly');
-      }else if(img.includes('black') || img.includes('ston') || img.includes('bla')){
-        $("#template").removeClass('ri-other').addClass('blackstone');
+      }else if(img== 'newport' || img.includes('new') || img.includes('port')){
+        $("#template").removeClass('ri-other').addClass('newport');
+      }else if(img== 'blackstone' || img.includes('black') || img.includes('ston') || img.includes('bla')){
+        $("#template").removeClass('ri-other').addClass('bkstone');
       }else {
         return;
       }
@@ -40,19 +41,32 @@ angular.module('kenzanGov')
 
     };
 
+    var generateSpeech = function(){
+      setTimeout(function(){
+        var input = $('.main-content > h1');
+        console.log(input.value)
+        var speaking = new Promise(function executor(success, fail){
+                        var msg = new SpeechSynthesisUtterance(input.value);
+                        msg.onEnd = function(){
+                          success(event);
+                        };
+                        speechSynthesis.speak(msg);
+                      });
+      }, 5000);
+    };
+
     vm.getData = function(){
       var imgName = $('#img-input').val().toLowerCase(),
           color = $('#color-input').val().toLowerCase(),
           message = $('#msg-input').val(),
           name = $('#name-input').val();
 
-      console.log(name);
-
       if(!!imgName && !!color && !!message && !!name){
         $location.path('/template');
         setTimeout(function(){
           getImgClass(imgName);
           getStyles(name, color, message);
+          setTimeout(generateSpeech(), 3000);
         }, 50);
       }else{
         alert('Please fill in all the fields.')
