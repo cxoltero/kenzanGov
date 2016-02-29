@@ -40,7 +40,7 @@ angular.module('kenzanGov')
       }, 100);
 
       setTimeout(function(){
-        var place, name, message, color;
+        var name, message, color;
         $('#k-logo').show();
         $('.main-content').children().show();
         setTimeout(function(){
@@ -55,11 +55,11 @@ angular.module('kenzanGov')
           $(".main-content > h2").text(msg).css({'color': cl, 'textTransform': 'capitalize'}).show().addClass('animated bounceInUp');
           color = cl;
           message = msg;
-          generateSpeech(name, message, cl)
+          generateSpeech(name)
         }, 3000);
       }, 800);
     };
-    var generateSpeech = function (elm, msg, cl){
+    var generateSpeech = function (elm){
       var elmClass = $('#template').attr('class'), place;
       if(elmClass.includes('prov')){
         place = 'Providence';
@@ -76,6 +76,7 @@ angular.module('kenzanGov')
       new Promise(function executor(success, fail){
         var msg = new SpeechSynthesisUtterance(messageString);
         msg.rate = .92;
+        msg.voice = 'Veena';
         msg.onEnd = function(){
           success(event);
         };
