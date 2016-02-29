@@ -55,7 +55,6 @@ angular.module('kenzanGov')
           $(".main-content > h2").text(msg).css({'color': cl, 'textTransform': 'capitalize'}).show().addClass('animated bounceInUp');
           color = cl;
           message = msg;
-
           generateSpeech(name, message, cl)
         }, 3000);
       }, 800);
@@ -74,7 +73,7 @@ angular.module('kenzanGov')
         place = 'rhode island'
       }
       var messageString = elm + ' that picture of  '+ place + ' looks great. The kenzan team is very happy to have you here.';
-      var speaking = new Promise(function executor(success, fail){
+      new Promise(function executor(success, fail){
         var msg = new SpeechSynthesisUtterance(messageString);
         msg.rate = .92;
         msg.onEnd = function(){

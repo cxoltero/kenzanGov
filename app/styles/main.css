@@ -94,6 +94,7 @@
   margin-top: 100px;
 }
 .main-content h1, .main-content h2, .main-content h3{
+  display: block;
   color: white;
   opacity: 1;
   font-family: 'Futura', sans-serif;
@@ -110,7 +111,7 @@
 }
 .main-content h3{
   padding: 10px;
-  margin-top: -2vh;
+  margin-top: -1vh;
   opacity: .8;
   font-size: 2.5ex;
 }

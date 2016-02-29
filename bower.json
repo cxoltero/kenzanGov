@@ -5,7 +5,8 @@
     "angular": "1.4.0",
     "bootstrap": "3.2.0",
     "angular-animate": "1.4.0",
-    "angular-route": "1.4.0"
+    "angular-route": "1.4.0",
+    "BootstrapXL": "bootstrapxl#1.0.3"
   },
   "appPath": "app",
   "moduleName": "kenzanGov",
