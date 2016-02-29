@@ -73,16 +73,14 @@ angular.module('kenzanGov')
       }else{
         place = 'rhode island'
       }
-      setTimeout(function(){
-        var messageString = elm + ' that picture of  '+ place + ' looks great. The kenzan team is very happy to have you here.';
-        var speaking = new Promise(function executor(success, fail){
-          var msg = new SpeechSynthesisUtterance(messageString);
-          msg.rate = .92;
-          msg.onEnd = function(){
-            success(event);
-          };
-          speechSynthesis.speak(msg);
-        });
-      }, 100);
+      var messageString = elm + ' that picture of  '+ place + ' looks great. The kenzan team is very happy to have you here.';
+      var speaking = new Promise(function executor(success, fail){
+        var msg = new SpeechSynthesisUtterance(messageString);
+        msg.rate = .92;
+        msg.onEnd = function(){
+          success(event);
+        };
+        speechSynthesis.speak(msg);
+      });
     };
   }]);
