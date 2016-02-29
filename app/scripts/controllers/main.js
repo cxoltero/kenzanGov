@@ -1,10 +1,10 @@
 'use strict';
 angular.module('kenzanGov')
-  .controller('MainCtrl',['$location', function ($location) {
-    $('.main-content').children().hide();
-    var vm = this;
-    vm.name = 'Kenzan';
-    vm.getData = function(){
+.controller('MainCtrl',['$location', function ($location) {
+  $('.main-content').children().hide();
+  var vm = this;
+  vm.name = 'Kenzan';
+  vm.getData = function(){
       var imgName = $('#img-input').val().toLowerCase(),
           color = $('#color-input').val().toLowerCase(),
           message = $('#msg-input').val(),
@@ -21,7 +21,7 @@ angular.module('kenzanGov')
       }
     };
 
-    var getImgClass = function(img){
+  var getImgClass = function(img){
       if(img== 'providence' || img.includes('prov') || img.includes('iden')){
         $("#template").removeClass('ri-other').addClass('prov');
       }else if(img== 'westerly' || img.includes('west') || img.includes('erl')){
@@ -34,7 +34,7 @@ angular.module('kenzanGov')
         return;
       }
     };
-    var getStyles = function(nm, cl, msg){
+  var getStyles = function(nm, cl, msg){
       setTimeout(function(){
         $('.main-content').show().fadeIn('slow');
       }, 100);
@@ -59,7 +59,7 @@ angular.module('kenzanGov')
         }, 3000);
       }, 800);
     };
-    var generateSpeech = function (elm){
+  var generateSpeech = function (elm){
       var elmClass = $('#template').attr('class'), place;
       if(elmClass.includes('prov')){
         place = 'Providence';
@@ -83,4 +83,4 @@ angular.module('kenzanGov')
         speechSynthesis.speak(msg);
       });
     };
-  }]);
+}]);
