@@ -2,9 +2,9 @@
 
 /**
  * @ngdoc overview
- * @name forTrashApp
+ * @name kenzanGovApp
  * @description
- * # forTrashApp
+ * # kenzanGovApp
  *
  * Main module of the application.
  */

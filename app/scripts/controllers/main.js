@@ -31,7 +31,7 @@ angular.module('kenzanGov')
           $(".main-content > h1").text('Welcome ' + nm).show().css({'color': cl, 'textTransform': 'capitalize', 'margin-top': '-1vh'}).addClass('animated bounceInLeft');
         }, 1000);
         setTimeout(function(){
-          $(".main-content > h3").text('Live Coding At KENZAN').show().addClass('animated bounceInRight');
+          $(".main-content > h3").text('Live Coding At Kenzan').show().addClass('animated bounceInRight');
         }, 2000);
         setTimeout(function(){
           $(".main-content > h2").text(msg).css({'color': cl, 'textTransform': 'capitalize'}).show().addClass('animated bounceInUp');
@@ -43,7 +43,7 @@ angular.module('kenzanGov')
     vm.getData = function(){
       var imgName = $('#img-input').val().toLowerCase(),
           color = $('#color-input').val().toLowerCase(),
-          message = $('#msg-input').val().toUpperCase(),
+          message = $('#msg-input').val(),
           name = $('#name-input').val();
 
       console.log(name);
